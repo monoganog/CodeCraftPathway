@@ -1,3 +1,5 @@
+# Image Smoother 661
+
 An image smoother is a filter of the size 3 x 3 that can be applied to each cell of an image by rounding down the average of the cell and the eight surrounding cells (i.e., the average of the nine cells in the blue smoother). If one or more of the surrounding cells of a cell is not present, we do not consider it in the average (i.e., the average of the four cells in the red smoother).
 
 Given an m x n integer matrix img representing the grayscale of an image, return the image after applying the smoother on each cell of it.
@@ -27,14 +29,16 @@ Constraints:
     1 <= m, n <= 200
     0 <= img[i][j] <= 255
 
-#Solution
+## Solution
 
-public class Solution {
+public class Solution
+{
 public int[][] ImageSmoother(int[][] img)
 {
 int[][] smoothedArray = new int[img.Length][];
 
-        for(int x = 0; x < img.Length; x++){
+        for(int x = 0; x < img.Length; x++)
+        {
 
             smoothedArray[x] = new int[img[x].Length];
 
@@ -69,7 +73,12 @@ int[][] smoothedArray = new int[img.Length][];
         if (row >= 0 && row < array.Length && col >= 0 && col < array[row].Length) {
             return true;
         }
-    return false;
+        return false;
     }
 
 }
+
+## Complexity
+
+Time O(m*n)
+Space O(m*n)
