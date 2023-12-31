@@ -1,4 +1,4 @@
-# Path Crossing 1496
+# 1496. Path Crossing
 
 https://leetcode.com/problems/path-crossing/description/
 
